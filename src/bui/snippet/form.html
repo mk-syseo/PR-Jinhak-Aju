@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Basic User Interface</title>
+<link rel="shortcut icon" href="./../../assets/images/front-logo-c.ico" />
+<link rel="stylesheet" type="text/css" href="./../../assets/css/main.css" />
+<link rel="stylesheet" href="./../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css">
+<script src="./../../node_modules/vanillajs-datepicker/dist/js/datepicker-full.min.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+	<div class="front-wrap flex">
+		<!--aside-->
+		<aside>
+			<h1 class="fr-logo"><a href="./../pages/front.html"><abbr title="Basic User Interpace">BUI</abbr></a></h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="./../pages/front.html">Pages</a>
+					</li>
+					<li class="snippet-ul">
+						<button>Snippet</button>
+						<ul>
+							<li>
+								<a href="./../snippet/color.html"><span>Color</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/button.html"><span>Button</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/tag.html"><span>Tag</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/font.html"><span>Font</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/form.html"><span>Form</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/tab.html"><span>Tab</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/table.html"><span>Table</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/swiper.html"><span>Swiper</span></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<!--//aside-->
+		<div id="content" class="flex-auto">
+			<div style="height: 100%; overflow-y: auto;">
+				<!-- Snippet -->
+				<section class="p-30">
+					<h2>Form</h2>
+					<form>
+						<fieldset style="border: none; padding: 0; margin: 0;">
+							<legend class="sr-only">fieldset name</legend>
+
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>Input Box</h4>
+								<div class="inputText w-20">
+									<label for="input-ex01">인풋레이블</label>
+									<input id="input-ex01" type="text" placeholder="입력하세요">
+								</div>
+								<div class="inputText w-40">
+									<label for="input-ex02">인풋레이블</label>
+									<input id="input-ex02" type="text" placeholder="입력하세요" disabled>
+								</div>
+								<div class="inputText">
+									<label for="input-ex03">인풋레이블</label>
+									<input id="input-ex03" type="text" placeholder="입력하세요">
+								</div>
+								<div class="inputText">
+									<label for="input-ex04" class="sr-only">인풋레이블</label>
+									<input id="input-ex04" type="text" placeholder="입력하세요">
+								</div>
+							</div>
+
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>Input Box : DatePicker</h4>
+								<div class="inputDate">
+									<label for="datePick-id01">날짜선택</label>
+									<input id="datePick-id01" type="text" name="datePick" placeholder="날짜선택">
+									<script>
+										const elem = document.querySelector('input[name="datePick"]');
+										const datepicker = new Datepicker(elem, {
+										// ...options
+										});
+									</script>
+								</div>
+								<div class="inputDate">
+									<label for="datePick-id02">날짜선택</label>
+									<input id="datePick-id02" type="text" name="datePick02" disabled>
+									<script>
+										const elem2 = document.querySelector('input[name="datePick02"]');
+										const datepicker2 = new Datepicker(elem, {
+										// ...options
+										});
+									</script>
+								</div>
+							</div>
+	
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>Search Input Box</h4>
+								<div class="searchText w-20">
+									<label for="Search-ex01">인풋레이블</label>
+									<input id="Search-ex01" type="text" placeholder="검색해주세요">
+									<button type="button" title="검색"><span class="sr-only">검색</span></button>
+								</div>
+								<div class="searchText w-40">
+									<label for="Search-ex02">인풋레이블</label>
+									<input id="Search-ex02" type="text" placeholder="검색해주세요" disabled>
+									<button type="button" title="검색"><span class="sr-only">검색</span></button>
+								</div>
+								<div class="searchText">
+									<label for="Search-ex03">인풋레이블</label>
+									<input id="Search-ex03" type="text" placeholder="검색해주세요">
+									<button type="button" title="검색"><span class="sr-only">검색</span></button>
+								</div>
+								<div class="searchText">
+									<label for="Search-ex03" class="sr-only">인풋레이블</label>
+									<input id="Search-ex03" type="text" placeholder="검색해주세요">
+									<button type="button" title="검색"><span class="sr-only">검색</span></button>
+								</div>
+							</div>
+
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>SearchTotal Input Round Box / Search red</h4>
+								<div class="searchRoundText w-20">
+									<label for="Search-round-ex01">인풋레이블</label>
+									<input id="Search-round-ex01" type="text" placeholder="검색어를 입력하세요">
+									<button type="button" class="sr-red" title="검색"><span class="sr-only">검색</span></button>
+								</div>
+								<div class="searchRoundText w-40">
+									<label for="Search-round-ex02">인풋레이블 disabled</label>
+									<input id="Search-round-ex02" type="text" placeholder="검색어를 입력하세요" disabled>
+									<button type="button" class="sr-red" title="검색"><span class="sr-only">검색</span></button>
+								</div>
+								<div class="searchRoundText">
+									<label for="Search-round-ex03">인풋레이블</label>
+									<input id="Search-round-ex03" type="text" placeholder="검색어를 입력하세요">
+									<button type="button" class="sr-red" title="검색"><span class="sr-only">검색</span></button>
+								</div>
+								<div class="searchRoundText sr-brown">
+									<label for="Search-round-ex03">인풋레이블 sr-brown</label>
+									<input id="Search-round-ex03" type="text" placeholder="검색어를 입력하세요">
+									<button type="button" class="sr-red" title="검색"><span class="sr-only">검색</span></button>
+								</div>
+								<div class="searchRoundText sr-brown">
+									<label for="Search-round-ex04" class="sr-only">인풋레이블 sr-brown</label>
+									<input id="Search-round-ex04" type="text" placeholder="검색어를 입력하세요">
+									<button type="button" class="sr-red" title="검색"><span class="sr-only">검색</span></button>
+								</div>
+							</div>
+							
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>Select Box</h4>
+								<div class="selectBox w-20">
+									<select>
+										<option value="">선택해주세요</option>
+										<option value="">테스트 02</option>
+										<option value="">테스트 03</option>
+										<option value="">테스트 04</option>
+									</select>
+								</div>
+								<div class="selectBox w-40">
+									<select disabled>
+										<option value="">선택해주세요</option>
+										<option value="">테스트 02</option>
+										<option value="">테스트 03</option>
+										<option value="">테스트 04</option>
+									</select>
+								</div>
+								<div class="selectBox">
+									<select>
+										<option value="">선택해주세요</option>
+										<option value="">테스트 02</option>
+										<option value="">테스트 03</option>
+										<option value="">테스트 04</option>
+									</select>
+								</div>
+							</div>
+	
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>Radio Button</h4>
+								<div class="radioButton">
+									<input type="radio" id="radio-ex01" name="radioName" value="radio-ex01" checked>
+									<label for="radio-ex01">
+										<span>라디오버튼 예시1</span>
+									</label>
+								</div>
+								<div class="radioButton">
+									<input type="radio" id="radio-ex02" name="radioName" value="radio-ex02">
+									<label for="radio-ex02">
+										<span>radio-ex02</span>
+									</label>
+								</div>
+								<div class="radioButton">
+									<input type="radio" id="radio-ex03" name="radioName" value="radio-ex03" disabled>
+									<label for="radio-ex03">
+										<span>radio-ex02 비활성</span>
+									</label>
+								</div>
+								<div class="radioButton">
+									<input type="radio" id="radio-ex03-1" name="radioName3" value="radio-ex03" checked disabled>
+									<label for="radio-ex03-1">
+										<span>radio-ex02 비활성(체크된상태)</span>
+									</label>
+								</div>
+							</div>
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>Radio Button (레이블없음)</h4>
+								<div class="flex gap-10">
+									<div class="radioButton">
+										<input type="radio" id="radio-ex04" name="radioName2" value="radio-ex04" checked>
+										<label for="radio-ex04">
+											<span class="sr-only">radio-ex03</span>
+										</label>
+									</div>
+									<div class="radioButton">
+										<input type="radio" id="radio-ex05" name="radioName2" value="radio-ex05">
+										<label for="radio-ex05">
+											<span class="sr-only">radio-ex04</span>
+										</label>
+									</div>
+								</div>
+							</div>
+	
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>Check Box</h4>
+								<div class="checkBox">
+									<input type="checkbox" id="check-ex01" name="check-ex01" checked>
+									<label for="check-ex01">체크박스 예시1</label>
+								</div>
+								<div class="checkBox">
+									<input type="checkbox" id="check-ex02" name="check-ex02">
+									<label for="check-ex02">check-ex02</label>
+								</div>
+								<div class="checkBox">
+									<input type="checkbox" id="check-ex02-1" name="check-ex02" disabled>
+									<label for="check-ex02-1">check-ex02 비활성</label>
+								</div>
+								<div class="checkBox">
+									<input type="checkbox" id="check-ex02-2" name="check-ex02" checked disabled>
+									<label for="check-ex02-2">check-ex02 비활성(체크된상태)</label>
+								</div>
+							</div>
+	
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>Check Box (레이블없음)</h4>
+								<div class="flex gap-10">
+									<div class="checkBox">
+										<input type="checkbox" id="check-ex03" name="check-ex03" checked>
+										<label for="check-ex03">
+											<span class="sr-only">check-ex03</span>
+										</label>
+									</div>
+									<div class="checkBox">
+										<input type="checkbox" id="check-ex04" name="check-ex04">
+										<label for="check-ex04">
+											<span class="sr-only">check-ex04</span>
+										</label>
+									</div>
+								</div>
+							</div>
+	
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>Textarea</h4>
+								<div class="flex gap-10">
+									<div class="textarea">
+										<label for="textarea-ex">Textarea</label>
+										<textarea id="textarea-ex" rows="10" placeholder="내용을 입력하세요"></textarea>
+									</div>
+									<div class="textarea">
+										<label for="textarea-ex2">Textarea disabled</label>
+										<textarea id="textarea-ex2" rows="10" disabled>입력된 내용</textarea>
+									</div>
+								</div>
+							</div>
+	
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>Mobile</h4>
+								<ul class="mobile-set">
+									<li>
+										<select id="mobile-ex">
+											<option value="" selected>010</option>
+											<option value="">테스트 02</option>
+											<option value="">테스트 03</option>
+											<option value="">테스트 04</option>
+										</select>
+									</li>
+									<li><input id="mobile-ex-02" type="tel" placeholder=""></li>
+									<li><input id="mobile-ex-02" type="tel" placeholder=""></li>
+								</ul>
+							</div>
+	
+						</fieldset>
+					</form>
+	
+					<div class="mt-30">
+						<h4 class="mb-10">라운드박스 : 스크롤 커스텀</h4>
+						<div class="round-box">
+							<div class="round-box-top">
+								<ul class="scrollBar">
+									<li>
+										<p><strong>개인정보 수집, 이용목적</strong></p>
+										<p>Q&A 게시판 운영을 위해 최소한의 개인정보를 수집 · 이용하고 있습니다.</p>
+										<p>입력된 정보는 Q&A 게시판 운영 이외의 용도로는 이용되지 않습니다.</p>
+									</li>
+									<li>
+										<p><strong>개인정보 수집 및 이용에 대한 동의</strong></p>
+										<p>▶ 수집항목 : 이름</p>
+										<p>▶ 개인정보의 보유 및 이용 기간 : 수집된 개인정보는 2년마다 일괄 삭제</p>
+									</li>
+									<li>
+										<p><strong>개인정보 수집 및 이용에 대한 동의</strong></p>
+										<p>▶ 수집항목 : 이름</p>
+										<p>▶ 개인정보의 보유 및 이용 기간 : 수집된 개인정보는 2년마다 일괄 삭제</p>
+									</li>
+									<li>
+										<p><strong>개인정보 수집 및 이용에 대한 동의</strong></p>
+										<p>▶ 수집항목 : 이름</p>
+										<p>▶ 개인정보의 보유 및 이용 기간 : 수집된 개인정보는 2년마다 일괄 삭제</p>
+									</li>
+								</ul>
+							</div>
+							<div class="round-box-bottom">
+								<div class="checkBox">
+									<input type="checkbox" id="check-ex01-01" name="check-ex01-01">
+									<label for="check-ex01-01">개인정보의 수집 및 이용에 동의합니다.</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Snippet -->
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

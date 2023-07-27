@@ -1,0 +1,40 @@
+// p-*, px-*, py-*
+
+$arrows: (
+	x: (
+		"-left",
+		"-right",
+	),
+	y: (
+		"-top",
+		"-bottom",
+	),
+	t: "-top",
+	b: "-bottom",
+	r: "-right",
+	l: "-left",
+) !default;
+
+@mixin space($bp: null) {
+	$infix: if($bp == null, "", "-#{$bp}");
+
+	@for $i from 0 through $space-count {
+		@each $p1, $p2 in (m: "margin", p: "padding") {
+			.#{$p1}#{$infix}-#{$i} {
+				#{$p2}: $spacing * $i !important;
+			}
+			@each $name, $arrow in $arrows {
+				.#{$p1}#{$name}#{$infix}-#{$i} {
+					@if length($arrow) > 1 {
+						#{$p2}#{nth($arrow, 1)}: $spacing * $i !important;
+						#{$p2}#{nth($arrow, 2)}: $spacing * $i !important;
+					} @else {
+						#{$p2}#{$arrow}: $spacing * $i !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include space;

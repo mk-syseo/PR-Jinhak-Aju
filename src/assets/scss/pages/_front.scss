@@ -1,0 +1,256 @@
+// Front 스타일
+.intro {
+	> div {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		.page-head {
+			h1 {
+				width: 6rem;
+				height: 6rem;
+				background: url(./../images/front-logo.svg) no-repeat center;
+			}
+		}
+		.page-body {
+			.para {
+				line-height: 1.8;
+			}
+			.button-display {
+				border-bottom: 1px solid $gray-700;
+				display: flex;
+				justify-content: center;
+				padding: 0 0 6rem;
+				margin: 4rem 0;
+				.bui-btn {
+					text-decoration: none;
+					span {
+						position: relative;
+						font-size: 2.4rem;
+						padding-bottom: .5rem;
+						color: $gray-100;
+						transition: all .3s;
+						&:before {
+							content: "";
+							position: absolute;
+							display: block;
+							width: 0;
+							height: 3px;
+							background-color: $blue-200;
+							bottom: 0;
+							transition: all .3s;
+						}
+					}
+					&:hover {
+						span {
+							color: $blue-200;
+							&:before {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+		.page-foot {
+			a {
+				color: $blue-200;
+			}
+			&:focus,
+			&:visited {
+				color: $blue-200;
+			}
+		}
+	}
+}
+
+#wrap,
+.front-wrap {
+	height: 100%;
+}
+aside {
+	border-right: 1px solid $gray-800;
+	height: 100%;
+	background-color: #f5f5f5;
+	h1.fr-logo {
+		width: 6rem;
+		height: 6rem;
+		a {
+			display: block;
+			height: 6rem;
+			width: 6rem;
+			font-size: 0;
+			background: url(./../images/front-logo.svg) no-repeat center;
+		}
+	}
+	nav {
+		> ul {
+			> li {
+				border-bottom: 1px solid $gray-800;
+				> button,
+				> a {
+					cursor: pointer;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					height: 6rem;
+					border-radius: 0;
+					border: none;
+					padding: 0;
+					font-size: 1.2rem;
+					background-color: transparent;
+					text-decoration: none;
+					transition: all .3s;
+					&:focus,
+					&:visited {
+						color: $gray-050;
+					}
+					&:hover {
+						border-color: $blue-200;
+						color: $blue-200;
+						background-color: $white;
+					}
+				}
+				&.snippet-ul {
+					position: relative;
+					> button {
+						z-index: 3;
+					}
+					> ul {
+						position: absolute;
+						top: 0;
+						left: 0;
+						padding-left: 0;
+						box-shadow: .3rem .3rem .7em .5rem rgba(0,0,0,.1);
+						opacity: 0;
+						z-index: -1;
+						transition: all .3s;
+						> li {
+							background-color: $white;
+							> a {
+								display: block;
+								text-decoration: none;
+								line-height: 3;
+								color: $gray-050;
+								padding: 0 2.5rem 0 2rem;
+								transition: all .3s;
+								&:focus,
+								&:visited {
+									color: $gray-050;
+								}
+								> span {
+									position: relative;
+									font-size: 1.5rem;
+									transition: all .3s;
+									&:before {
+										content: "";
+										position: absolute;
+										display: block;
+										width: 0;
+										height: .2rem;
+										background-color: $blue-200;
+										bottom: -.2rem;
+										transition: all .3s;
+									}
+								}
+								&:hover {
+									color: $blue-200;
+									> span {
+										color: $blue-200;
+										&:before {
+											width: 100%;
+										}
+									}
+								}
+							}
+						}
+					}
+					&:hover {
+						> ul {
+							left: 0;
+							padding-left: 6.1rem;
+							opacity: 1;
+							z-index: 2;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.brd-box {
+	border: 1px solid $gray-700;
+	padding: 3rem;
+}
+.filelist {
+	> ul {
+		display: flex;
+		transition: all .3s;
+		> li {
+			flex: 3;
+			border: 1px solid rgba(0,0,0,.1);
+			padding: .4rem;
+			text-align: center;
+			font-size: 1.2rem;
+			font-weight: 400;
+			&.langth-xl {
+				flex: 4;
+			}
+			&.langth-xs {
+				flex: 1;
+			}
+			&.langth-s {
+				flex: 2;
+			}
+			a,
+			p,
+			span {
+				font-size: 1.2rem;
+				font-weight: 400;
+			}
+		}
+		&:hover {
+			background-color: rgba(46, 136, 240, 0.5);
+		}
+		&.uhead {
+			> li {
+				background-color: $gray-200;
+				color: $white;
+				border: 1px solid rgba(255,255,255,.1);
+			}
+		}
+	}
+	> ul:has(span) {
+		background-color: rgba(46, 136, 240, 0.3);
+	}
+	> ul:has(p) {
+		background-color: rgba(91, 240, 46, 0.3);
+		&:hover {
+			background-color: rgba(91, 240, 46, 0.5);
+		}
+	}
+	> ul.blank {
+		background-color: rgb(0, 0, 0, .2);
+		color: rgba(255,255,255, .8);
+	}
+	> ul.nopage {
+		background-color: rgb(255, 255, 0, .1);
+		&:hover {
+			background-color: rgb(255, 255, 0, .4);
+		}
+	}
+}
+.over-auto {
+	overflow: auto;
+}
+
+@media (max-width: 800px) {
+	.p-30.over-auto {
+	padding: 2rem!important;
+	}
+	.brd-box {
+		padding: 2rem;
+	}
+}

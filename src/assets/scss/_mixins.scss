@@ -1,0 +1,63 @@
+//  Breakpoints
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+	$min: map-get($breakpoints, $name);
+	@return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+	$max: map-get($breakpoints, $name);
+	@return if($max and $max > 0, $max - 0.02, null);
+}
+
+@mixin breakepoint-up($name, $breakpoints: $grid-breakpoints) {
+	$min: breakpoint-min($name, $breakpoints);
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+@mixin breakepoint-down($name, $breakpoints: $grid-breakpoints) {
+	$max: breakpoint-max($name, $breakpoints);
+	@if $max {
+		@media (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+// ::after
+@mixin pseudo(
+	$width: 100%,
+	$height: 100%,
+	$display: inline-block,
+	$pos: absolute,
+	$content: ""
+) {
+	content: $content;
+	display: $display;
+	position: $pos;
+	@include box($width, $height);
+}
+
+//  text-ellipsis
+@mixin text-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// text-ellipsis ( 2 lines )
+
+//  margin-auto
+@mixin margin-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// backdrop

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Basic User Interface</title>
+<link rel="shortcut icon" href="./../../assets/images/front-logo-c.ico" />
+<link rel="stylesheet" type="text/css" href="./../../assets/css/main.css" />
+</head>
+<body>
+<div id="wrap">
+	<div class="front-wrap flex">
+		<!--aside-->
+		<aside>
+			<h1 class="fr-logo"><a href="./../pages/front.html"><abbr title="Basic User Interpace">BUI</abbr></a></h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="./../pages/front.html">Pages</a>
+					</li>
+					<li class="snippet-ul">
+						<button>Snippet</button>
+						<ul>
+							<li>
+								<a href="./../snippet/color.html"><span>Color</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/button.html"><span>Button</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/tag.html"><span>Tag</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/font.html"><span>Font</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/form.html"><span>Form</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/tab.html"><span>Tab</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/table.html"><span>Table</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/swiper.html"><span>Swiper</span></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<!--//aside-->
+		<div id="content" class="flex-auto p-30 over-auto">
+			<!-- Snippet -->
+			<section>
+				<h2>Color</h2>
+				<div class="flex flex-wrap gap-30 mt-20">
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #222222;"></div>
+						<code class="mt-10">
+							$gray-050: #222222;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #333333;"></div>
+						<code class="mt-10">
+							$gray-100: #333333;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #666666;"></div>
+						<code class="mt-10">
+							$gray-200: #666666;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #767676;"></div>
+						<code class="mt-10">
+							$gray-300: #767676;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #999999;"></div>
+						<code class="mt-10">
+							$gray-400: #999999;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #BEBEBE;"></div>
+						<code class="mt-10">
+							$gray-500: #BEBEBE;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #cccccc;"></div>
+						<code class="mt-10">
+							$gray-600: #cccccc;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #dfdfdf;"></div>
+						<code class="mt-10">
+							$gray-700: #dfdfdf;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #eaeaea;"></div>
+						<code class="mt-10">
+							$gray-800: #eaeaea;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #f3f3f3;"></div>
+						<code class="mt-10">
+							$gray-900: #f3f3f3;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #f9f9f9;"></div>
+						<code class="mt-10">
+							$gray-1000: #f9f9f9;
+						</code>
+					</div>
+				</div>
+				<div class="flex flex-wrap gap-30 mt-30">
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #D80C18;"></div>
+						<code class="mt-10">
+							$red-100 : #D80C18;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #F48070;"></div>
+						<code class="mt-10">
+							$red-200 : #F48070;
+						</code>
+					</div>
+				</div>
+				<div class="flex flex-wrap gap-30 mt-30">
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #0077DD;"></div>
+						<code class="mt-10">
+							$blue-100 : #0077DD;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #0754B4;"></div>
+						<code class="mt-10">
+							$blue-200 : #0754B4;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #E3F2FF;"></div>
+						<code class="mt-10">
+							$blue-300 : #E3F2FF;
+						</code>
+					</div>
+				</div>
+				<div class="flex flex-wrap gap-30 mt-30">
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #7E726D;"></div>
+						<code class="mt-10">
+							$brown-300 : #7E726D;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #C1AE91;"></div>
+						<code class="mt-10">
+							$sand-100 : #C1AE91;
+						</code>
+					</div>
+					<div style="width: 150px;">
+						<div style="display: block; width: 50px; height: 50px; background-color: #54AA9B;"></div>
+						<code class="mt-10">
+							$green-100 : #54AA9B;
+						</code>
+					</div>
+				</div>
+			</section>
+			<!-- //Snippet -->
+		</div>
+	</div>
+</div>
+</body>
+</html>

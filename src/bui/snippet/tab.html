@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Basic User Interface</title>
+<link rel="shortcut icon" href="./../../assets/images/front-logo-c.ico" />
+<link rel="stylesheet" type="text/css" href="./../../assets/css/main.css" />
+</head>
+<body>
+<div id="wrap">
+	<div class="front-wrap flex">
+		<!--aside-->
+		<aside>
+			<h1 class="fr-logo"><a href="./../pages/front.html"><abbr title="Basic User Interpace">BUI</abbr></a></h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="./../pages/front.html">Pages</a>
+					</li>
+					<li class="snippet-ul">
+						<button>Snippet</button>
+						<ul>
+							<li>
+								<a href="./../snippet/color.html"><span>Color</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/button.html"><span>Button</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/tag.html"><span>Tag</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/font.html"><span>Font</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/form.html"><span>Form</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/tab.html"><span>Tab</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/table.html"><span>Table</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/swiper.html"><span>Swiper</span></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<!--//aside-->
+		<div id="content" class="flex-auto p-30 over-auto">
+			<!-- Snippet -->
+			<h2>Tab</h2>
+			<section class="mt-40">
+				<div class="title-area">
+					<h3>타이틀</h3>
+					<div class="setting-area">
+						<ul>
+							<li>
+								<button type="button" class="icon-reduction" title="폰트 크기 축소">축소</button>
+								<i class="icon-font"></i>
+								<button type="button" class="icon-magnification" title="폰트 크기 확대">확대</button>
+							</li>
+							<li>
+								<button type="button" class="icon-refresh" title="새로고침">새로고침</button>
+								<button type="button" class="icon-print" title="인쇄하기">프린트</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="tab">
+					<li>
+						<button type="button" title="전체 보기" onclick="toggleAction(this);" class="on">전체</button>
+					</li>
+					<li>
+						<button type="button" title="공통 보기" onclick="toggleAction(this);">공통</button>
+					</li>
+					<li>
+						<button type="button" title="수시 보기" onclick="toggleAction(this);">수시</button>
+					</li>
+					<li>
+						<button type="button" title="정시 보기" onclick="toggleAction(this);">정시</button>
+					</li>
+					<li>
+						<button type="button" title="편입 보기" onclick="toggleAction(this);">편입</button>
+					</li>
+					<li>
+						<button type="button" title="재외국인 보기" onclick="toggleAction(this);">재외국인</button>
+					</li>
+				</ul>
+				<script>
+					function toggleAction(element) {
+						const before = document.getElementsByClassName("on")[0]// 기존 on 클래스 있는 버튼
+						if (before && document.getElementsByClassName("on")[0] != element) {// 자신 이외에 on 클래스 있는 버튼이 있으면
+							before.classList.remove("on");// on 클래스 제거
+						}
+						element.classList.toggle("on");// on 클래스 toggle
+					}
+				</script>
+			</section>
+			<!-- //Snippet -->
+		</div>
+	</div>
+</div>
+</body>
+</html>

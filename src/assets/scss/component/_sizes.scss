@@ -1,0 +1,29 @@
+// w-*, h-*
+$size: 1;
+$count: 100;
+
+$sizes: (
+	w: "width",
+	h: "height",
+) !default;
+
+$msizes: (
+	mw: "width",
+	mh: "height",
+) !default;
+
+@for $i from 1 through $count {
+	@each $name, $property in $sizes {
+		.#{$name}-#{$i + $size} {
+			#{$property}: $i + $size + 0rem !important;
+		}
+	}
+}
+
+@for $i from 1 through $count {
+	@each $name, $property in $msizes {
+		.#{$name}-#{$i + $size} {
+			#{$property}: $i + $size + 0% !important;
+		}
+	}
+}

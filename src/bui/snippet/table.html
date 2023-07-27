@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Basic User Interface</title>
+<link rel="shortcut icon" href="./../../assets/images/front-logo-c.ico" />
+<link rel="stylesheet" type="text/css" href="./../../assets/css/main.css" />
+</head>
+<body>
+<div id="wrap">
+	<div class="front-wrap flex">
+		<!--aside-->
+		<aside>
+			<h1 class="fr-logo"><a href="./../pages/front.html"><abbr title="Basic User Interpace">BUI</abbr></a></h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="./../pages/front.html">Pages</a>
+					</li>
+					<li class="snippet-ul">
+						<button>Snippet</button>
+						<ul>
+							<li>
+								<a href="./../snippet/color.html"><span>Color</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/button.html"><span>Button</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/tag.html"><span>Tag</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/font.html"><span>Font</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/form.html"><span>Form</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/tab.html"><span>Tab</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/table.html"><span>Table</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/swiper.html"><span>Swiper</span></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<!--//aside-->
+		<div id="content" class="flex-auto p-30 over-auto">
+			<!-- Snippet -->
+			<section>
+				<h2>Table</h2>
+				<div class="flex flex-col gap-80 mt-50">
+					<table class="type-ta">
+						<!-- <colgroup>
+							<col style="width: 20%;">
+							<col style="width: 30%;">
+							<col style="width: 50%;">
+						</colgroup> -->
+						<tbody>
+							<tr>
+								<th class="mw-20">제목</th>
+								<td class="mw-30">내용</td>
+								<td class="mw-50">비고</td>
+							</tr>
+							<tr>
+								<th>제목 두번째</th>
+								<td>내용</td>
+								<td>비고</td>
+							</tr>
+						</tbody>
+					</table>
+	
+					<div>
+						<table class="type-gr">
+							<!-- <colgroup>
+								<col style="width: 20%;">
+								<col style="width: 30%;">
+								<col style="width: 50%;">
+							</colgroup> -->
+							<thead>
+								<tr>
+									<th class="mw-20">No</th>
+									<th class="mw-30">제목</th>
+									<th class="mw-50">비고</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-center">1</td>
+									<td>제목부분입니다.</td>
+									<td>비고내용입니다.</td>
+								</tr>
+								<tr>
+									<td class="text-center">2</td>
+									<td>제목부분입니다.</td>
+									<td>비고내용입니다.</td>
+								</tr>
+							</tbody>
+						</table>
+		
+						<div class="mt-40">
+							<ul class="pagenation">
+								<!-- <li><a href="" class="page-start">처음으로</a></li> -->
+								<li class="mr-15"><a href="" class="page-prev" title="이전페이지로 이동">이전</a></li>
+								<li class="active"><a href="">1</a></li>
+								<li><a href="">2</a></li>
+								<li><a href="">3</a></li>
+								<li class="ml-15"><a href="" class="page-next" title="다음페이지로 이동">다음</a></li>
+								<!-- <li><a href="" class="page-end">끝으로</a></li> -->
+							</ul>
+						</div>
+					</div>
+	
+					<table class="type-gr">
+						<tbody>
+							<tr class="bg-color">
+								<td class="mw-8 text-center mo-dsp-none">
+									<button type="button" class="fixed-pin">
+										<span class="sr-only">상단고정</span>
+									</button>
+								</td>
+								<td class="mw-42">
+									<div class="table-txt">
+										<span class="tag sand-100">공통</span>
+										<a href=""><p class="tit">제목부분입니다.</p></a>
+									</div>
+								</td>
+								<td class="mw-50 pr-40">
+									<ul class="table-ul">
+										<li>
+											<p type="button" class="added-file" title="첨부파일">
+												<span class="sr-only">첨부파일</span>
+											</p>
+										</li>
+										<li>
+											<span>2023.05.11</span>
+										</li>
+										<li>
+											<span>조회수 547</span>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td class="text-center mo-dsp-none">2</td>
+								<td>
+									<div class="table-txt">
+										<span class="tag sand-100">공통</span>
+										<a href=""><p class="tit">제목부분입니다.제목부분입니다. 제목부분입니다.제목부분입니다.제목부분입니다. 제목부분입니다.제목부분입니다.제목부분입니다. 제목부분입니다. 제목부분입니다. 제목부분입니다. 제목부분입니다. 제목부분입니다.</p></a>
+									</div>
+								</td>
+								<td class="pr-40">
+									<ul class="table-ul">
+										<li>
+											<a href="" class="btn-link" title="링크">
+												<span class="sr-only">링크</span>
+											</a>
+										</li>
+										<li>
+											<button type="button" class="btn-link" title="링크">
+												<span class="sr-only">링크</span>
+											</button>
+										</li>
+										<li>
+											<span>2023.05.11</span>
+										</li>
+										<li>
+											<span>조회수 547</span>
+										</li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3">
+									<div class="nodata">
+										<p>검색결과가 없습니다.</p>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="type-gr searchResult">
+						<tbody>
+							<tr>
+								<td>
+									<div class="table-txt-breadcrumb">
+											<strong>정시모집</strong>
+											<strong>공지사항</strong>
+									</div>
+									<div class="table-txt">
+											<a href="">
+													<p class="tit">제목부분입니다.제목부분입니다. <strong class="fc-red-100">정시모집</strong>
+													제목부분입니다.제목부분입니다.제목부분입니다.
+													제목부분입니다.제목부분입니다.제목부분입니다.
+													제목부분입니다. 제목부분입니다. 제목부분입니다.
+													제목부분입니다. 제목부분입니다.
+													</p>
+											</a>
+									</div>
+									<div class="table-txt-info">
+											<span class="date">2023.05.11</span>
+											<span class="count">조회수 547</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+									<td>
+											<div class="table-txt-breadcrumb">
+													<strong>정시모집</strong>
+													<strong>공지사항</strong>
+											</div>
+											<div class="table-txt">
+													<a href="">
+															<p class="tit">제목부분입니다.제목부분입니다. <strong class="fc-red-100">정시모집</strong>
+															제목부분입니다.제목부분입니다.제목부분입니다.
+															제목부분입니다.제목부분입니다.제목부분입니다.
+															제목부분입니다. 제목부분입니다. 제목부분입니다.
+															제목부분입니다. 제목부분입니다.
+															</p>
+													</a>
+											</div>
+											<div class="table-txt-info">
+													<span class="date">2023.05.11</span>
+													<span class="count">조회수 547</span>
+											</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="nodata">
+										<p>검색결과가 없습니다.</p>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+
+				</div>
+			</section>
+			<!-- //Snippet -->
+		</div>
+	</div>
+</div>
+</body>
+</html>

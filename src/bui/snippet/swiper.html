@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Basic User Interface</title>
+<link rel="shortcut icon" href="./../../assets/images/front-logo-c.ico" />
+<link rel="stylesheet" type="text/css" href="./../../assets/css/main.css" />
+<link rel="stylesheet" href="./../../node_modules/swiper/swiper-bundle.min.css">
+<script src="./../../node_modules/swiper/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+	<div class="front-wrap flex">
+		<!--aside-->
+		<aside>
+			<h1 class="fr-logo"><a href="./../pages/front.html"><abbr title="Basic User Interpace">BUI</abbr></a></h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="./../pages/front.html">Pages</a>
+					</li>
+					<li class="snippet-ul">
+						<button>Snippet</button>
+						<ul>
+							<li>
+								<a href="./../snippet/color.html"><span>Color</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/button.html"><span>Button</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/tag.html"><span>Tag</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/font.html"><span>Font</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/form.html"><span>Form</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/tab.html"><span>Tab</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/table.html"><span>Table</span></a>
+							</li>
+							<li>
+								<a href="./../snippet/swiper.html"><span>Swiper</span></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</aside>
+		<!--//aside-->
+		<div id="content" class="flex-auto">
+			<div style="height: 100%; overflow-y: auto;">
+				<!-- Snippet -->
+				<section class="p-30">
+					<h2>Form</h2>
+					<form>
+						<fieldset style="border: none; padding: 0; margin: 0;">
+							<legend class="sr-only">fieldset name</legend>
+	
+							<div class="pt-40 flex flex-col gap-10">
+								<h4>Swiper Ex</h4>
+								<div class="w-30" style="border: 1px dashed rgba(0,0,0,.2);">
+									<!-- Swiper -->
+									<div class="swiper mySwiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<p>Slide 1</p>
+											</div>
+											<div class="swiper-slide">
+												<p>Slide 2</p>
+											</div>
+											<div class="swiper-slide">
+												<p>Slide 3</p>
+											</div>
+										</div>
+									</div>
+									<!-- Initialize Swiper -->
+									<script>
+										var swiper = new Swiper(".mySwiper", {
+										});
+									</script>
+								</div>
+							</div>
+							
+						</fieldset>
+					</form>
+
+				</section>
+				<!-- //Snippet -->
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
