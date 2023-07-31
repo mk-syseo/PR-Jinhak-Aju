@@ -71,7 +71,8 @@
     "axios": "^0.19.2",
     "fs-extra": "^9.0.1",
     "swiper": "^9.4.1",
-    "vanillajs-datepicker": "^1.1.2"
+    "vanillajs-datepicker": "^1.1.2",
+    "gulp-gh-pages": "^0.5.4"
   },
   "engines": {
     "node": ">=10"
